@@ -1,0 +1,102 @@
+import { softwareData } from "@/components/data/softwareData"
+import Image from "next/image"
+
+export default async function SoftwareDetail({ params }) {
+  const resolvedParams = await params
+  const slug = resolvedParams.slug
+  const data = softwareData[slug]
+
+  if (!data) {
+    return (
+      <div className="text-white p-20">
+        Software no encontrado
+      </div>
+    )
+  }
+
+  return (
+    <main className="relative bg-[#0b0b0c] text-white min-h-screen px-6 md:px-12 py-32 overflow-hidden">
+
+      {/* GLOW GENERAL */}
+      <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-orange-500/20 blur-[120px] rounded-full"></div>
+
+      {/* MASCOTA DECORATIVA */}
+      <div className="absolute top-28 right-10 hidden lg:block z-10">
+        <Image
+          src="/mascota.png"
+          alt="Mascota"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="w-[120px] h-auto opacity-80 animate-float-slow drop-shadow-[0_0_40px_rgba(255,115,0,0.5)]"
+        />
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-20">
+
+        {/* HERO */}
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+
+          {/* TEXTO */}
+          <div className="animate-fade-in">
+
+            <p className="text-orange-500 text-sm mb-3 uppercase tracking-widest">
+              {data.subtitle}
+            </p>
+
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              {data.title}
+            </h1>
+
+            <p className="text-gray-400 mb-8 text-lg leading-relaxed">
+              {data.description}
+            </p>
+
+            {/* FEATURES */}
+            <div className="flex flex-wrap gap-3 mb-10">
+              {data.features.map((f, i) => (
+                <span
+                  key={i}
+                  className="text-sm bg-white/5 border border-white/10 px-4 py-2 rounded-full hover:border-orange-500/50 transition"
+                >
+                  {f}
+                </span>
+              ))}
+            </div>
+
+            {/* BOTONES */}
+            <div className="flex gap-4">
+
+              <button className="bg-orange-500 px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition shadow-[0_0_20px_rgba(255,115,0,0.4)]">
+                Solicitar Demo
+              </button>
+
+              <button className="border border-white/20 px-6 py-3 rounded-xl hover:bg-white/10 transition">
+                Ver más
+              </button>
+
+            </div>
+          </div>
+
+          {/* IMAGEN */}
+          <div className="relative group">
+
+            {/* glow detrás */}
+            <div className="absolute inset-0 bg-orange-500/20 blur-3xl opacity-30 group-hover:opacity-50 transition"></div>
+
+            <Image
+              src={data.image}
+              alt={data.title}
+              width={900}
+              height={600}
+              className="relative rounded-2xl border border-white/10 w-full h-auto group-hover:scale-[1.02] transition duration-500"
+            />
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+  )
+}
