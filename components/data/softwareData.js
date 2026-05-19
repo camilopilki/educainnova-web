@@ -1,52 +1,62 @@
 export const softwareData = {
   nexus: {
-    title: "Nexus Academy LMS",
-    subtitle: "Cloud LMS Platform",
+    title: "Edu Prompt",
+    subtitle: "Version 1.0 (Pro)",
     description:
-      "Infraestructura de aprendizaje omnicanal que integra inteligencia artificial para personalización en tiempo real.",
+      "Potencia tu práctica docente con inteligencia artificial. Una herramienta profesional diseñada para el éxito del educador moderno",
 
-    image: "/prueba.svg",
+    // 🔥 CAMBIO AQUÍ: Pasamos de 'image' a 'images' y abrimos corchetes []
+    images: [
+      "/EduPrompt/Login.png",
+      "/EduPrompt/Contexto.png",
+      "/EduPrompt/Diseño.png",
+      "/EduPrompt/TonoVoz.png"
+    ],
 
     features: [
-      "Rutas de aprendizaje adaptativas",
-      "Analítica predictiva",
-      "Aprendizaje social",
-      "Certificación blockchain",
+      "IA para docentes",
+      "Asistentes Virtuales",
+      "Productividad Docente",
+      "Innovación Educativa",
     ],
   },
 
   erp: {
-    title: "Insight ERP Educativo",
+    title: "Patrimonio Gob",
     subtitle: "Core Operations",
     description:
-      "Sistema de gestión administrativa diseñado para instituciones educativas con analítica avanzada.",
+      "Cero perdidas, control total. La plataforma definitiva para proteger el patrimonio de tu escuela con estándares estatales. Porque cada recurso cuenta para el aprendizaje, asegúrate de que siempre esté donde debe estar.",
 
-    image: "/prueba.svg",
+    images: [
+      "/PatrimonioGob/Dashboard.png",
+      "/PatrimonioGob/Bienes.png" // Agrega la ruta de tu segunda imagen aquí
+      //"/PatrimonioGob/Reportes.png",
+      //"/PatrimonioGob/Report2.png"  
+    ],
 
     features: [
-      "Gestión académica",
-      "Programación inteligente",
-      "Control financiero",
+      "Gestión de Recursos",
+      "Inventario inteligente",
+      "Control total",
     ],
   },
 
   ai: {
-    title: "Genius Tutor AI",
-    subtitle: "Personalized Learning",
+    title: "SIAK",
+    subtitle: "Sistema Integral para aplicación de Ley Karin",
     description:
-      "Tutor inteligente 24/7 que guía el aprendizaje mediante inteligencia artificial conversacional.",
-
+      "Sistema diseñada para servicios públicos, empresas u otros organismos, que requieran mejorar la gestión de la ley 21.643, para asegurar jurídicamente los procedimientos de investigación sobre el acoso laboral, acoso sexual y la violencia en el trabajo, promoviendo ambientes laborales seguros y respetuosos en Chile",
     image: "/prueba.svg",
 
     features: [
-      "Seguimiento cognitivo",
-      "Feedback adaptativo",
-      "Asistencia en tiempo real",
+      "Gestión Ley Karin",
+      "Espacios Seguros",
+      "Cero Violencia",
     ],
   },
 
   mobile: {
-    title: "Aura Pocket Learner",
+    title: "UTP Digital",
     subtitle: "Mobile Companion",
     description:
       "Aplicación de micro-aprendizaje impulsada por IA para reforzar conocimientos desde cualquier lugar.",

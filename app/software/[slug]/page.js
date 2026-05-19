@@ -1,5 +1,7 @@
 import { softwareData } from "@/components/data/softwareData"
 import Image from "next/image"
+// 🔥 1. Importamos el Carrusel que creamos
+import Carousel from "@/components/ui/Carrusel"
 
 export default async function SoftwareDetail({ params }) {
   const resolvedParams = await params
@@ -78,19 +80,15 @@ export default async function SoftwareDetail({ params }) {
             </div>
           </div>
 
-          {/* IMAGEN */}
+          {/* 🔥 2. EL NUEVO CARRUSEL */}
           <div className="relative group">
 
             {/* glow detrás */}
             <div className="absolute inset-0 bg-orange-500/20 blur-3xl opacity-30 group-hover:opacity-50 transition"></div>
 
-            <Image
-              src={data.image}
-              alt={data.title}
-              width={900}
-              height={600}
-              className="relative rounded-2xl border border-white/10 w-full h-auto group-hover:scale-[1.02] transition duration-500"
-            />
+            {/* 🔥 3. Llamamos al componente y le pasamos el arreglo de imágenes */}
+            <Carousel images={data.images} />
+            
           </div>
 
         </div>

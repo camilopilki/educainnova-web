@@ -18,8 +18,9 @@ export default function ContactSection() {
           </h1>
 
           <p className="text-gray-400 mt-6 max-w-md">
-            Transformamos la educación mediante inteligencia artificial de vanguardia.
-            Cuéntanos tu visión y diseñaremos la solución técnica perfecta.
+            Transformamos la gestión y el aprendizaje escolar mediante capacitación experta
+            en IA y soluciones digitales personalizadas. Lidera el futuro educativo con el Sello
+            IA.
           </p>
 
           <div className="mt-6">

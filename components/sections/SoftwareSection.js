@@ -11,31 +11,32 @@ export default function SoftwareSection() {
         </p>
 
         <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-          Nuestra Suite de <br />
+          Nuestras Plataformas de  <br />
           <span className="text-orange-500">Innovación Educativa</span>
         </h2>
 
         <p className="text-gray-400 mt-6">
-          Ingeniería de software diseñada para transformar el aprendizaje
-          mediante inteligencia artificial y experiencias modernas.
+          Herramientas de alto impacto diseñadas para automatizar la
+          gestión y potenciar la creatividad pedagógica. Tecnología chilena
+          que devuelve el tiempo a quienes educa.
         </p>
       </div>
 
       {/* GRID */}
       <div className="flex flex-col gap-10">
 
-        {/* LMS */}
+        {/* EduPrompt*/}
         <SoftwareCard
-          title="Nexus Academy LMS"
-          subtitle="Cloud LMS Platform"
-          description="Infraestructura de aprendizaje omnicanal que integra IA para personalización en tiempo real."
+          title="Edu Prompt"
+          subtitle="Version 1.0"
+          description="Potencia tu práctica docente con inteligencia artificial. Una herramienta profesional diseñada para el éxito del educador moderno."
           tags={[
-            "Adaptive Pathways",
-            "Predictive Analytics",
-            "Social Learning",
-            "Blockchain Certs"
+            "IA para docentes",
+            "Asistentes Virtuales",
+            "Productividad Docente",
+            "Innovación Educativa"
           ]}
-          image="/prueba.svg"
+          image="/EduPrompt/Login.png"
           href="/software/nexus"
         />
 
@@ -43,34 +44,36 @@ export default function SoftwareSection() {
         <div className="grid md:grid-cols-2 gap-10">
 
           <SoftwareCard
-            title="Insight ERP Educativo"
-            subtitle="Core Operations"
-            description="Gestión administrativa completa con analítica predictiva para instituciones."
+            title="Patrimonio Gob"
+            subtitle=""
+            description="Cero pérdidas, control total. 
+            Cumple con los estándares estatales y mantén cada recurso de tu 
+            escuela exactamente donde debe estar."
             tags={[
-              "Smart Scheduling",
-              "Financial Intelligence"
+              "Gestión de Recursos",
+              "Inventario Inteligente"
             ]}
-            image="/prueba.svg"
+            image="/PatrimonioGob/Login.png"
             href="/software/erp"
           />
 
-          <SoftwareCard
-            title="Genius Tutor AI"
-            subtitle="Personalized Learning"
-            description="Tutor inteligente 24/7 que guía el aprendizaje mediante IA conversacional."
+          {/*<SoftwareCard
+            title="SIAK"
+            subtitle="Sistema Integral para aplicación de Ley Karin"
+            description="Optimiza la gestión de la Ley 21.643. Respalda jurídicamente tus investigaciones de acoso y violencia laboral con total seguridad."
             tags={[
-              "Cognitive Tracking",
-              "Adaptive Feedback"
+              "Gestión Ley Karin",
+              "Espacios Seguros"
             ]}
             image="/prueba.svg"
             href="/software/ai"
-          />
+          />*/}
 
         </div>
 
         {/* MOBILE */}
-        <SoftwareCard
-          title="Aura Pocket Learner"
+        {/*<SoftwareCard
+          title="UTP Digital"
           subtitle="Mobile Companion"
           description="Micro-aprendizaje impulsado por IA para reforzar conocimiento desde cualquier lugar."
           tags={[
@@ -80,7 +83,7 @@ export default function SoftwareSection() {
           ]}
           image="/prueba.svg"
           href="/software/mobile"
-        />
+        />*/}
 
       </div>
 

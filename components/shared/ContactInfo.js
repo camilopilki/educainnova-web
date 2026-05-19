@@ -10,7 +10,7 @@ export default function ContactInfo() {
         <div>
           <p className="text-white font-medium">Sede Central</p>
           <p className="text-gray-400">
-            Paseo de la Innovación 45, Distrito Tecnológico, 28001
+            Ejercito #435, Concepción
           </p>
         </div>
       </div>
@@ -22,8 +22,7 @@ export default function ContactInfo() {
         </div>
         <div>
           <p className="text-white font-medium">Escríbenos</p>
-          <p className="text-gray-400">hola@educainnova.ai</p>
-          <p className="text-gray-400">proyectos@educainnova.ai</p>
+          <p className="text-gray-400">contacto@educainnova.cl</p>
         </div>
       </div>
 
@@ -34,7 +33,8 @@ export default function ContactInfo() {
         </div>
         <div>
           <p className="text-white font-medium">Llámanos</p>
-          <p className="text-gray-400">+34 912 345 678</p>
+          <p className="text-gray-400">+56 9 8439 3443 </p>
+          <p className="text-gray-400">+56 9 4975 9760 </p>
         </div>
       </div>
 
