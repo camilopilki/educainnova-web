@@ -1,4 +1,5 @@
-import SoftwareCard from "@/components/ui/SoftwareCard"
+import Link from "next/link";
+import SoftwareCard from "@/components/ui/SoftwareCard";
 
 export default function SoftwareSection() {
   return (
@@ -46,9 +47,7 @@ export default function SoftwareSection() {
           <SoftwareCard
             title="Patrimonio Gob"
             subtitle=""
-            description="Cero pérdidas, control total. 
-            Cumple con los estándares estatales y mantén cada recurso de tu 
-            escuela exactamente donde debe estar."
+            description="Cero pérdidas, control total. Cumple con los estándares estatales y mantén cada recurso de tu escuela exactamente donde debe estar."
             tags={[
               "Gestión de Recursos",
               "Inventario Inteligente"
@@ -100,13 +99,15 @@ export default function SoftwareSection() {
           </p>
 
           <div className="flex justify-center gap-4 mt-8">
-            <button className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-xl font-medium">
-              Solicitar Demo
-            </button>
+            
+            {/* BOTÓN MODIFICADO CON NEXT/LINK */}
+            <Link href="/solicitar-demo?software=Nuestra Suite">
+              <button className="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-xl font-medium transition">
+                Solicitar Demo
+              </button>
+            </Link>
 
-            <button className="border border-white/20 hover:bg-white/10 px-6 py-3 rounded-xl">
-              Contactar Ventas
-            </button>
+          
           </div>
 
         </div>

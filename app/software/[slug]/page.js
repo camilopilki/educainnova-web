@@ -1,6 +1,7 @@
 import { softwareData } from "@/components/data/softwareData"
 import Image from "next/image"
-// 🔥 1. Importamos el Carrusel que creamos
+import Link from "next/link" // 🔥 1. Importamos Link de Next.js
+// 🔥 Importamos el Carrusel que creamos
 import Carousel from "@/components/ui/Carrusel"
 
 export default async function SoftwareDetail({ params }) {
@@ -69,24 +70,27 @@ export default async function SoftwareDetail({ params }) {
             {/* BOTONES */}
             <div className="flex gap-4">
 
-              <button className="bg-orange-500 px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition shadow-[0_0_20px_rgba(255,115,0,0.4)]">
-                Solicitar Demo
-              </button>
+              {/* 🔥 2. Envolvemos el botón con el Link y el parámetro del software */}
+              <Link href={`/solicitar-demo?software=${data.title}`}>
+                <button className="bg-orange-500 px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition shadow-[0_0_20px_rgba(255,115,0,0.4)] hover:scale-[1.02]">
+                  Solicitar Demo
+                </button>
+              </Link>
 
-              <button className="border border-white/20 px-6 py-3 rounded-xl hover:bg-white/10 transition">
+              {/*<button className="border border-white/20 px-6 py-3 rounded-xl hover:bg-white/10 transition">
                 Ver más
-              </button>
+              </button>*/}
 
             </div>
           </div>
 
-          {/* 🔥 2. EL NUEVO CARRUSEL */}
+          {/* EL NUEVO CARRUSEL */}
           <div className="relative group">
 
             {/* glow detrás */}
             <div className="absolute inset-0 bg-orange-500/20 blur-3xl opacity-30 group-hover:opacity-50 transition"></div>
 
-            {/* 🔥 3. Llamamos al componente y le pasamos el arreglo de imágenes */}
+            {/* Llamamos al componente y le pasamos el arreglo de imágenes */}
             <Carousel images={data.images} />
             
           </div>
